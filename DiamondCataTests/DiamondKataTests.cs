@@ -13,7 +13,7 @@ namespace DiamondCataTests
         {
             var diamondBuilder = new DiamondBuilder(letter);
             var diamonQuarter = diamondBuilder
-                .BuildBasicQuarter()
+                .BasicQuarter()
                 .Build();
             var diamondChars = letter.GetWithPreviousChars();
 
@@ -30,8 +30,8 @@ namespace DiamondCataTests
         {
             var diamondBuilder = new DiamondBuilder(letter);
             var diamondHalf = diamondBuilder
-                .BuildBasicQuarter()
-                .Duplicate()
+                .BasicQuarter()
+                .ExtendVertically()
                 .Build();
             var diamondChars = letter.GetWithPreviousChars();
             var diamondHeight = letter.GetAlphabeticalIndex() * 2 - 1;
@@ -48,8 +48,8 @@ namespace DiamondCataTests
         {
             var diamondBuilder = new DiamondBuilder(letter);
             var diamondWhole = diamondBuilder
-                .BuildBasicQuarter()
-                .Duplicate()
+                .BasicQuarter()
+                .ExtendVertically()
                 .Mirror()
                 .Build();
             var diamondChars = letter.GetWithPreviousChars();

@@ -15,7 +15,7 @@ namespace DiamondCataTests
             _diamondChar = diamondChar;
         }
 
-        public DiamondBuilder BuildBasicQuarter()
+        public DiamondBuilder BasicQuarter()
         {
             var diamondChars = _diamondChar.GetWithPreviousChars();
             _partialDiamond = new string[_diamondChar.GetAlphabeticalIndex()];
@@ -29,7 +29,7 @@ namespace DiamondCataTests
 
             return this;
         }
-        public DiamondBuilder Duplicate()
+        public DiamondBuilder ExtendVertically()
         {
             var duplicates = _partialDiamond.Take(_partialDiamond.Length - 1).Reverse().ToArray();
             _partialDiamond = _partialDiamond.Concat(duplicates).ToArray();
