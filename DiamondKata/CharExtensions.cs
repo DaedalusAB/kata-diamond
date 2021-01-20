@@ -13,6 +13,7 @@ namespace DiamondCata
         public static IReadOnlyList<char> GetWithPreviousChars(this char c)
         {
             return Enumerable.Range(65, c.GetAlphabeticalIndex()).Select(decChar => (char) decChar).ToList();
+            // test git
         }
     }
 }
